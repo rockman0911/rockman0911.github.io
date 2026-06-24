@@ -3,109 +3,198 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的個人網站</title>
-    <style>
-        /* 網站的視覺樣式 (CSS) */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f7f6;
-            color: #333;
-        }
-        header {
-            background-color: #2c3e50;
-            color: #ffffff;
-            text-align: center;
-            padding: 3rem 1rem;
-            border-bottom: 4px solid #18bc9c;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-        header p {
-            font-size: 1.2rem;
-            margin-top: 10px;
-            color: #bdc3c7;
-        }
-        .container {
-            width: 85%;
-            max-width: 900px;
-            margin: 2rem auto;
-            overflow: hidden;
-        }
-        .section {
-            background: #ffffff;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-        h2 {
-            color: #2c3e50;
-            border-bottom: 2px solid #ecf0f1;
-            padding-bottom: 10px;
-            margin-top: 0;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 10px;
-        }
-        a {
-            color: #18bc9c;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <title>Célestin Official Box</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-
-    <header>
-        <h1>你好，我是 詹詠宸</h1>
-        <p>智慧自動化工程系在讀 | 熱愛技術與生活</p>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col justify-between font-sans">
+    <header class="bg-white shadow-sm py-4 px-6 flex justify-between items-center">
+        <h1 class="text-xl font-bold text-blue-600 tracking-wide">Célestin's Lab</h1>
+        <button onclick="showPage('home')" class="border border-blue-600 text-blue-600 px-4 py-1.5 rounded-lg hover:bg-blue-50 transition">回首頁</button>
     </header>
-
-    <div class="container">
-        
-        <div class="section">
-            <h2>關於我</h2>
-            <p>目前是一名大學生，主修工程與資訊科學相關領域。我喜歡探索新技術，也熱衷於將理論應用於實際的專案與報告中，不斷在實作中尋找解決問題的最佳方法。</p>
+    <main class="flex-grow container mx-auto px-4 py-12 max-w-5xl">
+        <div id="page-home" class="space-y-8">
+            <div class="text-center space-y-2">
+                <h2 class="text-3xl font-extrabold text-slate-900">AI & 街舞跨界個人工具箱</h2>
+                <p class="text-slate-500">整合智慧自動化工程專題與街舞文化評估的全新平台</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between min-h-[250px]">
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-950 mb-3">自我介紹生成器</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed">依據個人背景、技能與經歷，自動整理不同語境下的自我介紹版本。</p>
+                    </div>
+                    <button onclick="showPage('career')" class="w-full bg-blue-600 text-white py-3 rounded-xl font-semibold hover:bg-blue-700 tracking-wide transition mt-6">進入模組</button>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between min-h-[250px]">
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-950 mb-3">職涯方向評估器</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed">透過多面向 Breaking 戰力傾向評估，提供相對應之戰術判讀與補強建議。</p>
+                    </div>
+                    <button onclick="showPage('dance')" class="w-full bg-blue-600 text-white py-3 rounded-xl font-semibold hover:bg-blue-700 tracking-wide transition mt-6">進入模組</button>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between min-h-[250px]">
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-950 mb-3">專題摘要整理器</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed">可依不同使用情境，自動轉換為履歷版、報告版、口語版與亮點版內容。</p>
+                    </div>
+                    <button onclick="showPage('project')" class="w-full bg-blue-600 text-white py-3 rounded-xl font-semibold hover:bg-blue-700 tracking-wide transition mt-6">進入模組</button>
+                </div>
+            </div>
         </div>
-
-        <div class="section">
-            <h2>近期專案與研究</h2>
-            <ul>
-                <li><strong>機器學習實作：</strong> 使用 K-means 分群演算法進行資料視覺化分佈實作。</li>
-                <li><strong>流體力學研究：</strong> 探討阿基米德浮力原理在造船與潛艦技術上的應用。</li>
-                <li><strong>環保科技分析：</strong> 針對自動回收機（RVM）的基礎設施與運作流程進行比較研究。</li>
-            </ul>
+        <div id="page-dance" class="hidden space-y-6">
+            <div class="border-b border-slate-200 pb-4">
+                <span class="bg-blue-50 text-blue-600 text-xs font-bold px-2.5 py-1 rounded-full">功能模組</span>
+                <h2 class="text-3xl font-extrabold text-slate-950 mt-2">Battle 戰術與傾向評估器</h2>
+                <p class="text-slate-500 text-sm mt-1">透過拉動你的 Breaking 四大指標分數，自動化分析你的個人 Battle 戰術風格與加強方向！</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-white p-5 rounded-xl border border-slate-100 flex flex-col justify-between">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-bold text-slate-800">大地板爆發力 (Power Moves)</span>
+                        <span id="val-power" class="bg-blue-50 text-blue-600 font-bold px-2 py-0.5 rounded text-sm">3</span>
+                    </div>
+                    <input type="range" min="1" max="5" value="3" id="slide-power" oninput="updateVal('power')" class="w-full h-2 bg-slate-200 rounded-lg accent-blue-600">
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-slate-100 flex flex-col justify-between">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-bold text-slate-800">搖滾步與音樂性 (Toprock)</span>
+                        <span id="val-music" class="bg-blue-50 text-blue-600 font-bold px-2 py-0.5 rounded text-sm">3</span>
+                    </div>
+                    <input type="range" min="1" max="5" value="3" id="slide-music" oninput="updateVal('music')" class="w-full h-2 bg-slate-200 rounded-lg accent-blue-600">
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-slate-100 flex flex-col justify-between">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-bold text-slate-800">排腿與地板控制 (Footwork)</span>
+                        <span id="val-footwork" class="bg-blue-50 text-blue-600 font-bold px-2 py-0.5 rounded text-sm">3</span>
+                    </div>
+                    <input type="range" min="1" max="5" value="3" id="slide-footwork" oninput="updateVal('footwork')" class="w-full h-2 bg-slate-200 rounded-lg accent-blue-600">
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-slate-100 flex flex-col justify-between">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-bold text-slate-800">定格與肢體控制 (Freeze)</span>
+                        <span id="val-freeze" class="bg-blue-50 text-blue-600 font-bold px-2 py-0.5 rounded text-sm">3</span>
+                    </div>
+                    <input type="range" min="1" max="5" value="3" id="slide-freeze" oninput="updateVal('freeze')" class="w-full h-2 bg-slate-200 rounded-lg accent-blue-600">
+                </div>
+            </div>
+            <button onclick="runAnalysis()" class="w-full bg-blue-600 text-white py-3 rounded-xl font-semibold hover:bg-blue-700 tracking-wide transition">執行戰力分析</button>
+            <div class="space-y-4 pt-4">
+                <div class="bg-white p-6 rounded-xl border border-slate-100 space-y-2">
+                    <h4 class="font-bold text-slate-900">風格判定：</h4>
+                    <p class="text-slate-500 text-sm" id="result-direction">尚未執行分析。</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-slate-100 space-y-2">
+                    <h4 class="font-bold text-slate-900">戰術說明與強烈建議：</h4>
+                    <p id="result-desc" class="text-slate-500 text-sm">請先調整上方各項傾向分數後再執行分析。</p>
+                </div>
+            </div>
         </div>
-
-        <div class="section">
-            <h2>興趣與嗜好</h2>
-            <ul>
-                <li><strong>模型收藏：</strong> 熱愛收藏高階七龍珠 GK 雕像。</li>
-                <li><strong>戰鬥陀螺：</strong> 關注 Beyblade X 賽制與對戰研究。</li>
-                <li><strong>街舞文化：</strong> 喜歡研究 Breaking 的歷史發展與技巧元素。</li>
-                <li><strong>音樂製作：</strong> 偶爾嘗試音樂剪輯與 Beat 混音製作。</li>
-            </ul>
+        <div id="page-career" class="hidden space-y-6">
+            <div class="border-b border-slate-200 pb-4">
+                <span class="bg-blue-50 text-blue-600 text-xs font-bold px-2.5 py-1 rounded-full">功能模組</span>
+                <h2 class="text-3xl font-extrabold text-slate-950 mt-2">自我介紹生成器</h2>
+                <p class="text-slate-500 text-sm mt-1">輸入你的專業資料，一鍵轉換成專屬網頁版自我介紹內容。</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                <div>
+                    <label class="font-bold text-slate-700">姓名</label>
+                    <input id="inname" type="text" placeholder="例如：詹詠宸 (Célestin)" class="w-full p-3 border border-slate-200 rounded-lg mt-1 focus:outline-blue-600">
+                </div>
+                <div>
+                    <label class="font-bold text-slate-700">科系</label>
+                    <input id="indept" type="text" placeholder="例如：智慧自動化工程系" class="w-full p-3 border border-slate-200 rounded-lg mt-1 focus:outline-blue-600">
+                </div>
+                <div class="md:col-span-2">
+                    <label class="font-bold text-slate-700">核心專長與核心技能</label>
+                    <input id="inskill" type="text" placeholder="例如：Python、SolidWorks、Machine Learning、Power Moves" class="w-full p-3 border border-slate-200 rounded-lg mt-1 focus:outline-blue-600">
+                </div>
+            </div>
+            <button onclick="genIdentity()" class="w-full bg-blue-600 text-white py-3 rounded-xl font-semibold hover:bg-blue-700 tracking-wide transition">生成個人簡介</button>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-white p-6 rounded-xl border border-slate-100 space-y-2">
+                    <h4 class="font-bold text-slate-900">正式版介紹</h4>
+                    <p id="out12" class="text-slate-500 text-sm leading-relaxed">目前尚未生成內容。</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-slate-100 space-y-2">
+                    <h4 class="font-bold text-slate-900">簡短精鍊版</h4>
+                    <p id="out34" class="text-slate-500 text-sm leading-relaxed">目前尚未生成內容。</p>
+                </div>
+            </div>
         </div>
-
-        <div class="section">
-            <h2>聯絡方式</h2>
-            <p>如果你對我的專案或興趣有共鳴，歡迎與我交流！</p>
-            <ul>
-                <li>Email: <a href="mailto:your.email@example.com">jeffhandsome0815@gmail.com</a></li>
-            </ul>
+        <div id="page-project" class="hidden space-y-6">
+            <div class="border-b border-slate-200 pb-4">
+                <span class="bg-blue-50 text-blue-600 text-xs font-bold px-2.5 py-1 rounded-full">功能模組</span>
+                <h2 class="text-3xl font-extrabold text-slate-950 mt-2">專題摘要整理器</h2>
+                <p class="text-slate-500 text-sm mt-1">一鍵幫你把生硬的工程專題整理成高含金量的摘要排版。</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                <div>
+                    <label class="font-bold text-slate-700">專題名稱</label>
+                    <input id="pjname" type="text" placeholder="例如：廢紙容器功能性資源回收高效整合系統開發" class="w-full p-3 border border-slate-200 rounded-lg mt-1 focus:outline-blue-600">
+                </div>
+                <div>
+                    <label class="font-bold text-slate-700">使用技術</label>
+                    <input id="pjtech" type="text" placeholder="例如：QR Code 追蹤系統、資料庫整合、自動化控制" class="w-full p-3 border border-slate-200 rounded-lg mt-1 focus:outline-blue-600">
+                </div>
+                <div class="md:col-span-2">
+                    <label class="font-bold text-slate-700">研究成果與應用價值</label>
+                    <input id="pjresult" type="text" placeholder="例如：成功與統一實業進行產學合作，大幅提升資源回收與追蹤效率" class="w-full p-3 border border-slate-200 rounded-lg mt-1 focus:outline-blue-600">
+                </div>
+            </div>
+            <button onclick="genProject()" class="w-full bg-blue-600 text-white py-3 rounded-xl font-semibold hover:bg-blue-700 tracking-wide transition">一鍵生成專題摘要</button>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-white p-6 rounded-xl border border-slate-100 space-y-2">
+                    <h4 class="font-bold text-slate-900">專題核心重點</h4>
+                    <p id="out56" class="text-slate-500 text-sm leading-relaxed">目前尚未生成內容。</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-slate-100 space-y-2">
+                    <h4 class="font-bold text-slate-900">應用價值與亮點</h4>
+                    <p id="out78" class="text-slate-500 text-sm leading-relaxed">目前尚未生成內容。</p>
+                </div>
+            </div>
         </div>
-
-    </div>
-
+    </main>
+    <footer class="bg-white border-t border-slate-100 py-4 text-center text-xs text-slate-400">
+        &copy; 2026 Célestin. All Rights Reserved.
+    </footer>
+    <script>
+        function showPage(n) {
+            document.getElementById('page-home').classList.add('hidden');
+            document.getElementById('page-dance').classList.add('hidden');
+            document.getElementById('page-career').classList.add('hidden');
+            document.getElementById('page-project').classList.add('hidden');
+            document.getElementById('page-'+n).classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        function updateVal(t) {
+            document.getElementById('val-'+t).innerText = document.getElementById('slide-'+t).value;
+        }
+        function runAnalysis() {
+            var p=parseInt(document.getElementById('slide-power').value);
+            var m=parseInt(document.getElementById('slide-music').value);
+            var f=parseInt(document.getElementById('slide-footwork').value);
+            var z=parseInt(document.getElementById('slide-freeze').value);
+            var d='', c='';
+            if(p>=4 && z>=4) { d='重砲轟炸流 (Power & Freeze)'; c='你具備極高的大地板爆發力與定格炸點控制能力！建議在 Battle 當中，將炸點精準對在音樂的重拍（Drop）上，用高難度的 Power Move 接乾淨的 Freeze 終結，這在裁判眼中會是非常強烈的致命招式！'; }
+            else if(m>=4 && f>=4) { d='流暢音樂家 (Style & Footwork)'; c='你的節奏感敏銳，地板排腿細膩且連貫。在賽事中，切忌一上場就急著出大招，建議先用 Toprock 咬住音樂的旋律，再順暢地過渡到流暢的 Footwork 做層次變幻，用音樂性玩弄對手！'; }
+            else { d='全能型戰士 (All-Rounder)'; c='你的各項街舞能力發展相當均衡，擁有全方位的對決彈性。在 Battle 時，能隨時根據對手的招式風格進行反制（Counter）。建議在連貫性中加入突發性的節奏轉折，會讓你的排舞更具侵略性！'; }
+            document.getElementById('result-direction').innerHTML = "<span class='text-blue-600 font-bold text-base'>"+d+"</span>";
+            document.getElementById('result-desc').innerText = c;
+        }
+        function genIdentity() {
+            var n=document.getElementById('inname').value || '詹詠宸 (Célestin)';
+            var d=document.getElementById('indept').value || '智慧自動化工程系';
+            var s=document.getElementById('inskill').value || 'Python、SolidWorks、Machine Learning、Breaking';
+            document.getElementById('out12').innerText = '你好，我是 ' + n + '，目前就讀於 ' + d + '。我的專業核心在於結合自動化工程與 AI 技術，並具備 ' + s + ' 等多維度跨界技能，致力於將智慧系統應用於實際痛點解決。';
+            document.getElementById('out34').innerText = n + ' | ' + d + ' | 專長：' + s + '。';
+        }
+        function genProject() {
+            var n=document.getElementById('pjname').value || '廢紙容器功能性資源回收高效整合系統開發';
+            var t=document.getElementById('pjtech').value || 'QR Code 追蹤系統與自動化控制';
+            var r=document.getElementById('pjresult').value || '成功完成高效率整合系統開發';
+            document.getElementById('out56').innerText = '本專題名為「' + n + '」，核心採用 ' + t + ' 進行全面架構搭建。';
+            document.getElementById('out78').innerText = '實務應用價值：' + r + '，有效展現出 Industry 4.0 的智慧實作潛力。';
+        }
+    </script>
 </body>
 </html>
